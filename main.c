@@ -22,7 +22,7 @@ static void sighandler(int signo){
         if(close(fd) == -1){
             printf("CLOSE %d: %s\n", errno, strerror(errno));
         }
-        exit(1);
+        exit(0);
     }
     if(signo == 10){//if SIGUSR1
         printf("Parent Process: %d\n", getppid());
